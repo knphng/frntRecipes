@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Krittiya Noipheng">
+
+    <title>My Recipes Book</title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">My Recipes Book</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Add new recipes</a></li>
+            <li id="getFolders"><a href="/">Folders</a></li>
+            <li><a href="/" id="getRecipes">Recipes</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" id="index-container">
+      <div class="row">
+        <div class="col-md-12">
+            <h2 class="page-header" id="page-header"><a class="btn btn-default" id="add">+</a></h2>
+            <!--TABLE CONTENT-->
+            <table class="table table-hover" id="table-recipes">
+                <tbody id="tbody-recipes">
+                </tbody>
+            </table><!--TABLE CONTENT-->
+            <!--TABLE CONTENT-->
+            <table class="table table-hover" id="table-folders">
+                <tbody id="tbody-folders">
+                </tbody>
+            </table><!--TABLE CONTENT-->
+
+            <!--RECIPE DETAILS CONTENT-->
+            <div class="container" id="recipe-details" hidden="true">
+                <h4>Cooking Time :</h4>
+                <p><span id="cookingTime"></span> <button class="btn btn-default" id="setTimer"><span class="glyphicon glyphicon-time" ></span></button> <p>
+                <hr>
+                <h4>Ingredients :</h4>
+                <p id="ingredients"><p>
+                <hr>
+                <h4>Recipe :</h4>
+                <p id="recipe"><p>
+                <hr>
+            </div> <!--RECIPE CONTENT-->
+
+            <!--FOLDERS DETAILS CONTENT-->
+            <div class="container" id="folder-details" hidden="true">
+
+            </div> <!--RECIPE CONTENT-->
+
+
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <div class="loader">
+        <svg viewBox="0 0 32 32" width="32" height="32">
+          <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+        </svg>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="scripts/app.js" async></script>
+    <script src="scripts/timer.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
